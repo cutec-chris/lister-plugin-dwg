@@ -31,12 +31,16 @@
         <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>
-    <Units Count="1">
+    <Units Count="2">
       <Unit0>
         <Filename Value="dwgfile.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="dwgfile"/>
       </Unit0>
+      <Unit1>
+        <Filename Value="dibimagereader.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DIBImageReader"/>
+      </Unit1>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
