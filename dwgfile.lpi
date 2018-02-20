@@ -27,7 +27,7 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <HostApplicationFilename Value="C:/Prometheus/TCS/paradoxtest1/promet/output/i386-win32/wfxtester.exe"/>
+        <HostApplicationFilename Value="C:/Quellen/promet-erp/promet/output/i386-win32/wfxtester.exe"/>
         <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>

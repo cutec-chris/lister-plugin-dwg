@@ -25,7 +25,7 @@
       <Unit2>
         <Filename Value="../oofile/wlxplugin.pas"/>
         <UnitName Value="WLXPlugin"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="3"/>
         <CursorPos X="71" Y="91"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
@@ -106,89 +106,77 @@
       </Unit14>
       <Unit15>
         <Filename Value="../../components/prichedit/oodocument.pas"/>
-        <UnitName Value="oodocument"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="52"/>
         <CursorPos X="10" Y="118"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit15>
       <Unit16>
         <Filename Value="../../components/prichedit/fprichdocument.pas"/>
-        <UnitName Value="fprichdocument"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit16>
       <Unit17>
         <Filename Value="../../components/prichedit/richdocument.pas"/>
-        <UnitName Value="richdocument"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="24"/>
         <CursorPos X="3" Y="54"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit17>
       <Unit18>
         <Filename Value="dwgPreview.pas"/>
         <UnitName Value="DwgPreview"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="2"/>
         <CursorPos X="37" Y="76"/>
         <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit18>
       <Unit19>
-        <Filename Value="../../../../../../../Programme/lazarus140/fpc/2.6.4/source/packages/fcl-image/src/fpreadbmp.pp"/>
+        <Filename Value="../../../../../../Programme/lazarus140/fpc/2.6.4/source/packages/fcl-image/src/fpreadbmp.pp"/>
         <UnitName Value="FPReadBMP"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="178"/>
         <CursorPos X="23" Y="134"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit19>
       <Unit20>
-        <Filename Value="../../../../../../../Programme/lazarus/lcl/intfgraphics.pas"/>
+        <Filename Value="../../../../../../Programme/lazarus/lcl/intfgraphics.pas"/>
         <UnitName Value="IntfGraphics"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="19" Y="5643"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit20>
       <Unit21>
-        <Filename Value="../../../../../../../Programme/lazarus140/fpc/2.6.4/source/packages/fcl-image/src/bmpcomn.pp"/>
+        <Filename Value="../../../../../../Programme/lazarus140/fpc/2.6.4/source/packages/fcl-image/src/bmpcomn.pp"/>
         <UnitName Value="BMPcomn"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="59"/>
         <CursorPos X="4" Y="78"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit21>
       <Unit22>
-        <Filename Value="../../../../../../../Programme/lazarus140/fpc/2.6.4/source/packages/fcl-image/src/fpimage.pp"/>
+        <Filename Value="../../../../../../Programme/lazarus140/fpc/2.6.4/source/packages/fcl-image/src/fpimage.pp"/>
         <UnitName Value="FPimage"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="183"/>
         <CursorPos X="3" Y="196"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit22>
       <Unit23>
-        <Filename Value="../../../../../../../Programme/lazarus/lcl/graphtype.pp"/>
+        <Filename Value="../../../../../../Programme/lazarus/lcl/graphtype.pp"/>
         <UnitName Value="GraphType"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="156"/>
         <CursorPos Y="192"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit23>
       <Unit24>
-        <Filename Value="../../../../../../../Programme/lazarus/lcl/lcltype.pp"/>
+        <Filename Value="../../../../../../Programme/lazarus/lcl/lcltype.pp"/>
         <UnitName Value="LCLType"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1271"/>
         <CursorPos Y="1294"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit24>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
