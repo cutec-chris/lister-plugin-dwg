@@ -33,6 +33,7 @@ type
 
 function ListGetText(FileToLoad:pchar;contentbuf:pchar;contentbuflen:integer):pchar; dcpcall;
 begin
+  Result := '';
 end;
 
 function ListGetPreviewBitmapFile(FileToLoad:pchar;OutputPath:pchar;width,height:integer;
@@ -81,43 +82,47 @@ var
     Result := True;
   end;
 begin
-  Result := '';
-  StoreFileMode := FileMode;
-  FileMode := 0;
-  System.Assign(DwgFile, FileToLoad);
-  Reset(DwgFile, 1);
-  FileMode := StoreFileMode;
-  if IOResult <> 0 then
-    Exit;
   try
-    BlockRead(DwgFile, DwgFileHeader, SizeOf(DwgFileHeader));
-    if (IOResult = 0) and (Copy(DwgFileHeader.Signature, 1, 4) = 'AC10') and
-      (DwgFileHeader.ImageSeek <= FileSize(DwgFile)) then
-    begin
-      Seek(DwgFile, DwgFileHeader.ImageSeek);
-      BlockRead(DwgFile, DwgSentinelData, SizeOf(DwgSentinelData));
-      if (IOResult = 0) and CompareMem(@DwgSentinelData, @ImageSentinel, SizeOf(DwgSentinelData)) then
-        OK := ProcessImageData;
-    end;
-  finally
-    Close(DwgFile);
-  end;
-  if OK then
-    begin
-      try
-        Stream := TFileStream.Create(FileToLoad,fmOpenRead);
-        Stream.Position:=ImageRecord.StartOfData;
-        aImage := TFPMemoryImage.create(0,0);
-        aHandler := TLazReaderDIB.Create;
-        aImage.LoadFromStream(Stream,aHandler);
-        aImage.SaveToFile(OutputPath+'thumb.png');
-        Result := PChar(OutputPath+'thumb.png');
-      finally
-        aHandler.Free;
-        aImage.Free;
-        Stream.Free;
+    Result := '';
+    StoreFileMode := FileMode;
+    FileMode := 0;
+    System.Assign(DwgFile, FileToLoad);
+    Reset(DwgFile, 1);
+    FileMode := StoreFileMode;
+    if IOResult <> 0 then
+      Exit;
+    try
+      BlockRead(DwgFile, DwgFileHeader, SizeOf(DwgFileHeader));
+      if (IOResult = 0) and (Copy(DwgFileHeader.Signature, 1, 4) = 'AC10') and
+        (DwgFileHeader.ImageSeek <= FileSize(DwgFile)) then
+      begin
+        Seek(DwgFile, DwgFileHeader.ImageSeek);
+        BlockRead(DwgFile, DwgSentinelData, SizeOf(DwgSentinelData));
+        if (IOResult = 0) and CompareMem(@DwgSentinelData, @ImageSentinel, SizeOf(DwgSentinelData)) then
+          OK := ProcessImageData;
       end;
+    finally
+      Close(DwgFile);
     end;
+    if OK then
+      begin
+        try
+          Stream := TFileStream.Create(FileToLoad,fmOpenRead);
+          Stream.Position:=ImageRecord.StartOfData;
+          aImage := TFPMemoryImage.create(0,0);
+          aHandler := TLazReaderDIB.Create;
+          aImage.LoadFromStream(Stream,aHandler);
+          aImage.SaveToFile(OutputPath+'thumb.png');
+          Result := PChar(OutputPath+'thumb.png');
+        finally
+          aHandler.Free;
+          aImage.Free;
+          Stream.Free;
+        end;
+      end;
+  except
+    Result := '';
+  end;
 end;
 
 exports
